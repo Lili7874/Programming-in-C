@@ -1,0 +1,22 @@
+#include <stdio.h> //ta linia kodu sprawia, że program korzysta z pliku nagłówkowego stdio.h, który zawiera m.in. definicje funkcji printf i scanf, które są używane w programie.
+
+int main(void) {
+  double a, b;
+  double result = 0.0; 
+//powyższe dwie linie kodu tworzą zmienne a i b typu zmiennoprzecinkowego (double) oraz zmienną result typu double, która jest inicjalizowana wartością 0.0.
+
+  printf("Podaj pierwszą liczbę zmiennoprzecinkową: ");
+  scanf("%lf", &a);
+//pierwsza z tych linii wyświetla na ekranie komunikat z prośbą o podanie pierwszej liczby zmiennoprzecinkowej. Druga linia kodu oczekuje na wprowadzenie przez użytkownika liczby i przypisuje ją do zmiennej a.
+  printf("Podaj drugą liczbę zmiennoprzecinkową: ");
+  scanf("%lf", &b);
+//te dwie linie działają analogicznie do poprzednich, ale dotyczą drugiej liczby zmiennoprzecinkowej.
+  for (int i = 0; i < b; i++) {
+    result += a;
+  }
+//Pętla for wykonuje się tyle razy, ile wynosi b. Dla każdego przebiegu pętli zmienna result jest powiększana o wartość a. W ten sposób otrzymujemy iloczyn liczb a i b.
+
+  printf("Iloczyn liczb %lf i %lf wynosi: %lf\n", a, b, result);//Ta linia wyświetla na ekran komunikat z informacją o iloczynie liczb a i b. W miejscu %lf zostają wstawione odpowiednio wartości zmiennych a, b i result.
+
+  return 0;
+}

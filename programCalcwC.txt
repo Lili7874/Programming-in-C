@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  double a, b;
+  double result = 0.0;
+
+  printf("Podaj pierwszą liczbę zmiennoprzecinkową: ");
+  scanf("%lf", &a);
+
+  printf("Podaj drugą liczbę zmiennoprzecinkową: ");
+  scanf("%lf", &b);
+
+  int b_int = (int)round(b);
+  for (int i = 0; i < b_int; i++) {
+    result += a;
+  }
+  result += (b - b_int) * a;
+
+  printf("Iloczyn liczb %lf i %lf wynosi: %lf\n", a, b, result);
+
+  return 0;
+}
